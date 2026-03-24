@@ -5,6 +5,10 @@ public static class Program
 {
     public static void Main()
     {
+        Console.WriteLine("=== BankAccount demo (логические баги без исключений) ===");
+        BankAccountTest.Run();
+        Console.WriteLine();
+        Console.WriteLine("=== Storage demo (SQLite) ===");
         IStorage storage = new SqliteStorage("Data Source=storage.db");
 
         var ids = new List<long>
