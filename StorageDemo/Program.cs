@@ -22,5 +22,12 @@ public static class Program
         {
             Console.WriteLine($"{id} -> {storage.Retrieve(id)}");
         }
+        Console.WriteLine();
+        Console.WriteLine("=== Concurrency demos ===");
+        Example1.Run();
+        Example2.Run().GetAwaiter().GetResult();
+        Example3.Run();
+        Example4.Run();
+        Example5.Run();
     }
 }
